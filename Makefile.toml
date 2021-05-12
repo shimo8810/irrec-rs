@@ -1,0 +1,29 @@
+env_files = [{path = "./.env"}]
+
+[env]
+BUILD_OPTION = "--verbose"
+BUILD_MODE = "debug"
+
+[env.release]
+BUILD_OPTION = "--release"
+BUILD_MODE = "release"
+
+[tasks.build]
+command = "cargo"
+args = ["build", "${BUILD_OPTION}"]
+
+[tasks.upload]
+command = "rsync"
+args = [
+    "-av",
+    "target/armv7-unknown-linux-gnueabihf/${BUILD_MODE}/irrec",
+    "${USER}@${HOST}:${DST}"
+]
+
+[tasks.run]
+command = "ssh"
+args = [
+    "${USER}@${HOST}",
+    "${DST}/irrec"
+]
+dependencies = ["build", "upload"]
