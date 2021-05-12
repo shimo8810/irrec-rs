@@ -7,13 +7,13 @@ IR Receiver and Decoder for Raspberry Pi.
 ### install tool
 
 ```sh
-cargo install cargo-make
+$ cargo install cargo-make
 ```
 
 ### create `.env` file
 
 ```sh
-$cp sample.env .env
+$ cp sample.env .env
 ```
 
 ## run
@@ -21,11 +21,11 @@ $cp sample.env .env
 dev
 
 ```sh
-cargo make run
+$ cargo make run
 ```
 
 release
 
 ```sh
-cargo make run --profile release
+$ cargo make run --profile release
 ```
