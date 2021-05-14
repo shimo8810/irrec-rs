@@ -34,7 +34,6 @@ fn analyze(data: &Vec<u32>) -> Vec<u32> {
     };
 
     let tick = data[0] as f64 / leader_len;
-    let x = data[data.len() - 1];
 
     let data: Vec<_> = data
         .iter()

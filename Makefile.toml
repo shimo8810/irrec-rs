@@ -16,7 +16,7 @@ args = ["build", "${BUILD_OPTION}"]
 command = "rsync"
 args = [
     "-av",
-    "target/armv7-unknown-linux-gnueabihf/${BUILD_MODE}/irrec",
+    "target/armv7-unknown-linux-gnueabihf/${BUILD_MODE}/irrx",
     "${USER}@${HOST}:${DST}"
 ]
 
@@ -24,6 +24,6 @@ args = [
 command = "ssh"
 args = [
     "${USER}@${HOST}",
-    "${DST}/irrec"
+    "${DST}/irrx"
 ]
 dependencies = ["build", "upload"]
