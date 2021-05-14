@@ -1,4 +1,4 @@
-# irrec-rs
+# irrx-rs
 
 IR Receiver and Decoder for Raspberry Pi.
 
