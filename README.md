@@ -29,3 +29,8 @@ release
 ```sh
 $ cargo make run --profile release
 ```
+
+
+NEC: 562 x 16 = 8992 (us)
+AEHA: (350, 425, 500) * 8 = 2800, 3400, 4000
+SONY: 600 * 4 = 2400
